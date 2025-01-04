@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional LinkedIn post formatter with multiple font styles, dark mode, and easy copying">
+    <title>LinkedIn Post Formatter by Talah Tanveer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body class="min-h-screen bg-gray-100 transition-colors duration-200">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <a href="index.html" class="flex items-center text-blue-600 font-bold">
+                        <svg class="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                        </svg>
+                        LinkedIn Formatter
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" id="howToUseBtn">How to Use</a>
+                    <a href="about.html" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-200">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- How to Use Modal -->
+    <div id="howToUseModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50">
+        <div class="bg-white rounded-lg max-w-2xl mx-auto mt-20 p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">How to Use</h2>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="space-y-4">
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <h3 class="font-bold mb-2">1. Paste Your Content</h3>
+                    <p>Simply paste your LinkedIn post content into the text area. The formatter will automatically count characters, words, and lines.</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <h3 class="font-bold mb-2">2. Choose Your Style</h3>
+                    <p>Select from various font styles to make your post stand out. Each style is designed to be professional and readable on LinkedIn.</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <h3 class="font-bold mb-2">3. Preview and Copy</h3>
+                    <p>Preview how your post will look, and when you're satisfied, click the "Copy Text" button to copy it to your clipboard.</p>
+                </div>
+                <div class="p-4 bg-blue-50 rounded-lg">
+                    <h3 class="font-bold text-blue-800 mb-2">Pro Tips:</h3>
+                    <ul class="list-disc list-inside text-blue-800 space-y-2">
+                        <li>Use different fonts for headlines and body text</li>
+                        <li>Keep paragraphs short for better readability</li>
+                        <li>Preview in both light and dark modes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Input Section -->
+            <div class="bg-white rounded-lg shadow-lg p-6 transition-colors duration-200">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Your Content</h2>
+                <textarea 
+                    id="inputText"
+                    placeholder="Paste your LinkedIn post content here..."
+                    class="w-full h-64 p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none bg-gray-50"
+                ></textarea>
+                <!-- Character Count -->
+                <div class="stats mt-4 p-4 bg-gray-50 rounded-lg">
+                    <div class="grid grid-cols-3 gap-4 text-center">
+                        <div>
+                            <div class="font-medium">Characters</div>
+                            <div id="charCount" class="text-xl font-bold text-blue-500">0</div>
+                        </div>
+                        <div>
+                            <div class="font-medium">Words</div>
+                            <div id="wordCount" class="text-xl font-bold text-blue-500">0</div>
+                        </div>
+                        <div>
+                            <div class="font-medium">Lines</div>
+                            <div id="lineCount" class="text-xl font-bold text-blue-500">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Font Options and Preview -->
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 transition-colors duration-200">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Font Styles</h2>
+                    <div class="grid grid-cols-2 gap-3" id="fontButtons">
+                        <!-- Font buttons will be added here by JavaScript -->
+                    </div>
+                </div>
+
+                <div id="previewSection" class="bg-white rounded-lg shadow-lg p-6 hidden transition-colors duration-200">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold text-gray-800">Preview</h2>
+                        <button 
+                            id="copyButton"
+                            class="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                        >
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                            </svg>
+                            Copy Text
+                        </button>
+                    </div>
+                    <div id="preview" class="p-6 bg-gray-50 rounded-lg"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-12">
+        <div class="max-w-6xl mx-auto px-4 py-8">
+            <div class="text-center">
+                <div class="text-gray-600 mb-2">
+                    © 2024 LinkedIn Post Formatter. All rights reserved.
+                </div>
+                <div class="text-blue-600 font-medium">
+                    Created by Talah Tanveer
+                </div>
+                <div class="mt-4 text-sm text-gray-500">
+                    <a href="#" class="hover:text-gray-700 mx-2">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-700 mx-2">Terms of Use</a>
+                    <a href="#" class="hover:text-gray-700 mx-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="copyNotification" class="copy-notification">
+        Copied to clipboard!
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/formatter.js"></script>
+    <script src="js/dark-mode.js"></script>
+</body>
+</html>

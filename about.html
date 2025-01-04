@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' cdnjs.cloudflare.com; script-src 'self'">
+    <title>About - LinkedIn Post Formatter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body class="min-h-screen bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <a href="index.html" class="flex items-center text-blue-600 font-bold">
+                        <svg class="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                        </svg>
+                        LinkedIn Formatter
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-200">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-6">About LinkedIn Post Formatter</h1>
+            
+            <div class="space-y-6">
+                <section>
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Overview</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        LinkedIn Post Formatter is a professional tool designed to help you create visually appealing and well-formatted posts for LinkedIn. With multiple font styles, dark mode support, and instant preview capabilities, you can ensure your content stands out while maintaining professional standards.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Features</h2>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-gray-50 rounded-lg">
+                            <h3 class="font-bold text-gray-700 mb-2">Multiple Font Styles</h3>
+                            <p class="text-gray-600">Choose from a variety of professional fonts to make your posts visually distinct.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg">
+                            <h3 class="font-bold text-gray-700 mb-2">Dark Mode</h3>
+                            <p class="text-gray-600">Comfortable editing experience in any lighting condition with our dark mode feature.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg">
+                            <h3 class="font-bold text-gray-700 mb-2">Live Preview</h3>
+                            <p class="text-gray-600">See exactly how your post will look before publishing.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg">
+                            <h3 class="font-bold text-gray-700 mb-2">Text Statistics</h3>
+                            <p class="text-gray-600">Track character count, words, and lines to optimize your content.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">About the Creator</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Created by Talah Tanveer, LinkedIn Post Formatter stems from the need for a simple yet powerful tool to enhance LinkedIn content creation. With a focus on user experience and professional presentation, this tool helps content creators and professionals make their LinkedIn posts more engaging and visually appealing.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contact</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Have suggestions or feedback? Feel free to reach out:
+                    </p>
+                    <div class="mt-4">
+                        <a href="https://linkedin.com/in/your-profile" class="text-blue-600 hover:text-blue-800">LinkedIn Profile</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-12">
+        <div class="max-w-6xl mx-auto px-4 py-8">
+            <div class="text-center">
+                <div class="text-gray-600 mb-2">
+                    © 2024 LinkedIn Post Formatter. All rights reserved.
+                </div>
+                <div class="text-blue-600 font-medium">
+                    Created by Talah Tanveer
+                </div>
+                <div class="mt-4 text-sm text-gray-500">
+                    <a href="#" class="hover:text-gray-700 mx-2">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-700 mx-2">Terms of Use</a>
+                    <a href="#" class="hover:text-gray-700 mx-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/dark-mode.js"></script>
+</body>
+</html>

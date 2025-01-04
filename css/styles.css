@@ -1,0 +1,74 @@
+/* Base Font Styles */
+.font-style-1 { font-family: Arial, sans-serif; }
+.font-style-2 { font-family: Georgia, serif; }
+.font-style-3 { font-family: 'Courier New', monospace; }
+.font-style-4 { font-family: Arial, sans-serif; letter-spacing: 0.1em; }
+.font-style-5 { font-family: Arial, sans-serif; letter-spacing: -0.05em; }
+.font-style-6 { font-family: Arial, sans-serif; font-weight: bold; }
+.font-style-7 { font-family: Georgia, serif; font-weight: bold; }
+.font-style-8 { font-family: Arial, sans-serif; font-weight: 300; }
+
+/* Layout & Components */
+.copy-notification {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+    animation: fadeIn 0.3s, fadeOut 0.3s 1.7s;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1; transform: translateY(0);}
+    to {opacity: 0; transform: translateY(10px);}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .copy-notification {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        text-align: center;
+    }
+}
+
+/* Custom Scrollbar */
+textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}

@@ -1,0 +1,89 @@
+/* Dark Mode */
+.dark {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+.dark .bg-white {
+    background-color: #1a1a1a !important;
+}
+
+.dark .bg-gray-50, 
+.dark .bg-gray-100 {
+    background-color: #333333 !important;
+}
+
+.dark textarea {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border-color: #404040 !important;
+}
+
+.dark textarea:focus {
+    border-color: #63b3ed !important;
+    box-shadow: 0 0 0 2px rgba(99, 179, 237, 0.2) !important;
+}
+
+.dark #preview,
+.dark #preview p {
+    color: #ffffff !important;
+}
+
+.dark .text-gray-600 {
+    color: #a0aec0 !important;
+}
+
+.dark .text-gray-700,
+.dark .text-gray-800,
+.dark .text-gray-900 {
+    color: #ffffff !important;
+}
+
+.dark .border-t {
+    border-color: #404040 !important;
+}
+
+/* Dark Mode Scrollbar */
+.dark textarea::-webkit-scrollbar-track {
+    background: #2d2d2d !important;
+}
+
+.dark textarea::-webkit-scrollbar-thumb {
+    background: #666 !important;
+}
+
+.dark textarea::-webkit-scrollbar-thumb:hover {
+    background: #888 !important;
+}
+
+/* Dark Mode Stats */
+.dark .stats {
+    background-color: #333333 !important;
+}
+
+/* Dark Mode Buttons */
+.dark button:not(.bg-blue-500) {
+    background-color: #404040 !important;
+    color: #ffffff !important;
+}
+
+.dark button:not(.bg-blue-500):hover {
+    background-color: #4a4a4a !important;
+}
+
+/* Modal in Dark Mode */
+.dark #howToUseModal {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.dark #howToUseModal .bg-gray-50 {
+    background-color: #2d2d2d !important;
+}
+
+.dark #howToUseModal .bg-blue-50 {
+    background-color: #1a365d !important;
+}
+
+.dark #howToUseModal .text-blue-800 {
+    color: #90cdf4 !important;
+}
